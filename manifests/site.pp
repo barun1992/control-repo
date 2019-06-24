@@ -15,5 +15,8 @@ node 'puppetagent.master.com' {
      file { '/var/puppet/admin-app/log/tuning1.cnf':
           ensure => 'present',
      }
+     file { '/var/puppet/admin-app/log/tuning2.cnf':
+          ensure => 'present',
+     } 
 }
 
