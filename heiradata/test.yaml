@@ -1,0 +1,16 @@
+# test
+
+class profile::big::sftpplus::install (
+   String $nexus_repo_AIC,
+) {
+
+   $owner = lookup('profile::big::sftpplus::config::owner', String, deep)
+   $group = lookup('profile::big::sftpplus::config::group', String, deep)
+
+   file { "/var/puppet/sftpplus":
+      ensure   => directory,
+      owner    => $owner,
+      group    => $group,
+      mode     => '0755',
+   }
+}
