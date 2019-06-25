@@ -42,7 +42,9 @@
 #
 # Copyright 2019 Your name here, unless otherwise noted.
 #
-class role {
+class role::big {
 
+#  class { profile::big::fms_ftg::install:     stage => 'setup_app'  }
+   notify { "hellp": }
 
 }
