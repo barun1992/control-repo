@@ -26,7 +26,7 @@
 #
 # Examples
 # --------
-#
+#	
 # @example
 #    class { 'role':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
@@ -45,6 +45,6 @@
 class role::big {
 
 #  class { profile::big::fms_ftg::install:     stage => 'setup_app'  }
-   notify { "hellp": }
+   notify { "this is a role notification": }
 
 }
