@@ -1,22 +1,28 @@
 node 'puppetagent.master.com' {
-     file { '/var/puppet/site-conf':
+     file { '/etc/puppetlabs/facter':
           ensure => 'directory',
+          owner  => 'root',
+          group  => 'root',
+          mode   => '0755',
      }
-     file { '/var/puppet/admin-app':
+     file { '/etc/puppetlabs/facter/facts.d':
           ensure => 'directory',
-          owner => 'root',
-          group => 'root',
-          mode => '0755',
+          owner  => 'root',
+          group  => 'root',
+          mode   => '0755',
      }
-     tidy { 'remove_log':
-          path  => '/var/puppet/admin-app/log',
-          recurse => 1,
-     }
-     file { '/var/puppet/admin-app/log/tuning1.cnf':
+     file { '/etc/puppetlabs/facter/facts.d/facts.yaml':
           ensure => 'present',
+          owner  => 'root',
+          group  => 'root',
+          mode   => '0755',
      }
-     file { '/var/puppet/admin-app/log/tuning2.cnf':
-     ensure => 'present',
-     }
+     define resolve() {
+        $str = "role=big"
+
+        file { '/etc/resolv.conf':
+             content => $str,
+        }
+    }
 }
 
