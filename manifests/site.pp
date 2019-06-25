@@ -17,12 +17,5 @@ node 'puppetagent.master.com' {
           group  => 'root',
           mode   => '0755',
      }
-     define resolve() {
-        $str = "role=big"
-
-        file { '/etc/resolv.conf':
-             content => $str,
-        }
-    }
 }
 
