@@ -1,7 +1,7 @@
 node 'puppetagent.master.com' {
   if $::role {
 #    notify { "This is picking up the $::role role": }
-    include "role::${::role}"
+    include "role::big::${::role}"
 
   }
   else {
