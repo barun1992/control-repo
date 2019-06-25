@@ -42,9 +42,8 @@
 #
 # Copyright 2019 Your name here, unless otherwise noted.
 #
-class role::big {
+class role {
 
-  class { profile::big::fms_ftg::install:     stage => 'setup_app'  }
-   notify { "this is a role notification": }
+
 
 }
