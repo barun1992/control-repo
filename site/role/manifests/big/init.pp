@@ -4,7 +4,3 @@ class role::big {
    notify { "hellp": }
 
 }
-
-
-
-
