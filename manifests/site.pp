@@ -1,6 +1,6 @@
 node 'puppetagent.master.com' {
 
-   include role::big
+   include big
 #   notify { "helpp!!": }
 
 }
