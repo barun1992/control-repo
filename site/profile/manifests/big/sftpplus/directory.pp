@@ -1,8 +1,6 @@
 #test
 
-class profile::big::sftpplus::directory (
-  String $nexus_repo_AIX,
-) {
+class profile::big::sftpplus::directory {
 
   # Identify the Nexus Repository Server to be used.
   $owner = lookup('profile::big::sftpplus::config::owner', String, deep)
