@@ -15,5 +15,5 @@ hierarchy:
       - "common.yaml"
 #  - "roles/%{::role}"
 
-  - name: "Role specific data sources [5]"
+  - name: "Role specific data sources"
     path: "role/%{::role}/sftpplus/directory/*.yaml"
