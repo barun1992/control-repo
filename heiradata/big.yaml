@@ -1,4 +1,4 @@
 # test
 
-profile::big::sftpplus::config::owner:		root
-profile::big::sftpplus::config::group:		root
+profile::big::sftpplus::directory::owner:	'root'
+profile::big::sftpplus::directory::group:	'root'

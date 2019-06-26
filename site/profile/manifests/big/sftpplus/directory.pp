@@ -3,8 +3,8 @@
 class profile::big::sftpplus::directory {
 
   # Identify the Nexus Repository Server to be used.
-  $owner = lookup('profile::big::sftpplus::config::owner', String, deep)
-  $group = lookup('profile::big::sftpplus::config::owner', String, deep)
+  $owner = lookup('profile::big::sftpplus::directory::owner', String, deep)
+  $group = lookup('profile::big::sftpplus::directory::owner', String, deep)
 
 
   # Create the installation packages directory.
