@@ -16,5 +16,4 @@ hierarchy:
 #  - "roles/%{::role}"
 
   - name: "Role specific data sources [5]"
-    globs:
-      - "role/%{::role}/sftpplus/directory/*.yaml"
+    path: "role/%{::role}/sftpplus/directory/*.yaml"
